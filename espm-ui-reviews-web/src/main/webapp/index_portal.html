@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>SAP HANA Cloud Development Scenarios</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<script src="resources/sap-ui-core.js" id="sap-ui-bootstrap"
+	data-sap-ui-libs="sap.ui.commons, sap.ui.ux3, sap.ui.table"
+	data-sap-ui-theme="sap_goldreflection">
+	
+</script>
+
+<script type="text/javascript">                  
+
+	jQuery.sap.registerModulePath('app', '/espm-ui-reviews-web/js');	
+	jQuery.sap.require('app.config');
+	sap.app.config.displayProductSelectionPanel = false;        
+	sap.app.config.displayShell= false;
+
+
+</script>
+
+<script src="js/app.js"></script>
+
+
+
+<link rel="stylesheet" href="css/styles.css">
+
+</head>
+<!-- The subscriber for the productId event. This listens to the event for product selection and displays the reviews of that product -->
+<body class="sapUiBody" role="application">
+	<div id='content'></div>
+	<script type="text/javascript">                                                
+	var subId;                              
+	var isSub = false;                                                        
+	function updateReviews(topic, context)                             
+	{                                      
+		if ( context.getPropertyByKey("selectedKey") != null)                               
+		{                                               
+			var selectedKey = context.getPropertyByKey("selectedKey")[0];
+			var oEventBus = sap.ui.getCore().getEventBus();                                               
+			oEventBus.publish("sap.app", "selectedProductChanged", { selectedProductId : selectedKey });                                                                                      
+			// make sure to update the productId combo box                                                   
+			sap.ui.getCore().byId("product-selection-dropdown-box-id").setSelectedKey(selectedKey);  
+			
+			}                            
+	}                                                        
+	/*                              
+	* Subscribe to Site Context using sap-context feature.                              
+	*/                              
+	function subscribe()                             
+	{                                      
+		subId = gadgets.sapcontext.subscribe(updateReviews);                              
+	}                                                        
+	/*                              
+	* Unsubscribe to Site Context using sap-context feature.                              
+	*/                              
+	function unsubscribe()                             
+	{                                  
+		gadgets.sapcontext.unsubscribe(subId);                                  
+		isSub = false;                              
+	
+	}                                                          
+	gadgets.sapcontext.registerOnContextLoad(function() 
+				{                                    
+					subscribe();                            
+				});
+		
+	
+</script> 
+</body>
+</html>

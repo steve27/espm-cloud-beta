@@ -1,0 +1,44 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+	<localRepository>${user.home}/.m2/repository</localRepository>
+
+	<proxies>
+		<proxy>
+			<active>true</active>
+			<protocol>http</protocol>
+			<host>proxy</host>
+			<port>8080</port>
+		</proxy>
+		<proxy>
+			<active>true</active>
+			<protocol>https</protocol>
+			<host>proxy</host>
+			<port>8080</port>
+		</proxy>
+	</proxies>
+
+	<profiles>
+		<profile>
+			<id>development</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<!-- Properties that hold host and port of proxy if you have one. Otherwise set local.server.proxy.settings and browser.proxy.settings values empty -->
+				<local.server.proxy.settings>--httpProxyHost proxy --httpProxyPort 8080 --httpsProxyHost proxy --httpsProxyPort 8080</local.server.proxy.settings>
+				<browser.proxy.settings>-Dhttp.proxyHost=proxy -Dhttp.proxyPort=8080 -Dhttps.proxyHost=proxy -Dhttps.proxyPort=8080</browser.proxy.settings>
+
+				<!-- Properties needed to reference HANA Cloud SDK in cloud application maven project -->
+				<sap.cloud.sdk.version>1.45.13</sap.cloud.sdk.version>
+				<sap.cloud.sdk.path>C:/dev/hanacloud.sdk/1.45.13</sap.cloud.sdk.path>
+
+				<!-- Properties needed to reference sapui5 in cloud application maven project -->
+				<eclipse.path>C:/dev/eclipse</eclipse.path>
+				<sap.cloud.ui5.version>1.16.9</sap.cloud.ui5.version>
+			</properties>
+		</profile>
+	</profiles>
+</settings>
+
+

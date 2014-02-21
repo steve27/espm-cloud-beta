@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<!-- this module is used for the ESPM Reviews widget creation in SAP HANA Cloud Portal-->      
+<ModulePrefs title="ESPM Reviews" height="250" description='ESPM Reviews'>
+<Require feature="sap-xhrwrapper" />
+<Require feature="sap-context"/>
+</ModulePrefs>
+<Content type="html" href="index_portal.html" view="authoring, consumption, mobile, preview">  
+</Content>
+</Module>

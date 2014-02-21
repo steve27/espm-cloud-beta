@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>SAP HANA Cloud Development Scenarios</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<script src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js" id="sap-ui-bootstrap"
+	data-sap-ui-libs="sap.ui.commons,sap.ui.layout,sap.ui.ux3,sap.ui.table"
+	data-sap-ui-theme="sap_goldreflection">
+	
+</script>
+
+<script src="/espm-cloud-web/webshop/js/app.js"></script>
+
+<link rel="stylesheet" href="/espm-cloud-web/webshop/css/styles.css">
+
+</head>
+
+<!-- This is the widget event publisher code for product selection. The productId of the selected product is published as an event for all the listeners-->
+<body class="sapUiBody" role="application">
+	<div id='content'></div>
+	<script type="text/javascript">                             
+	        var oEventBus = sap.ui.getCore().getEventBus();                
+	        oEventBus.subscribe("sap.app", "selectedProductChanged", function(channelId, eventId, selectedProductId)                 
+	        		{                        
+	        			gadgets.sapcontext.publish("selectedKey", selectedProductId);                  
+	        		});             
+	        </script>
+</body>
+</html>

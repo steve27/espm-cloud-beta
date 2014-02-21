@@ -1,0 +1,6 @@
+Name=cloudextensionbackend
+URL=https://webreviewsespmhana.hana.ondemand.com/espm-ui-reviews-web/espm.svc
+Type=HTTP
+Authentication=NoAuthentication
+TrustAll=true
+ProxyType=Internet

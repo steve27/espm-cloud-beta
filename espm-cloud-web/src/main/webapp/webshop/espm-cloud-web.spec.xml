@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>  
+<!-- this module is used for the ESPM Webshop widget creation in SAP HANA Cloud Portal-->    
+<ModulePrefs title="ESPM Webshop" description='ESPM Webshop'>
+<Require feature="sap-xhrwrapper" />
+<Require feature="sap-context"/>
+</ModulePrefs>
+<Content type="html" href="../webshop/index_portal.html" view="authoring, consumption, mobile, preview">  
+</Content>
+</Module>
+

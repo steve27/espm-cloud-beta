@@ -1,0 +1,97 @@
+@SiteFontFamily: Arial, Calibri, Tahoma, Geneva, monospace !important;
+@SiteBackgroundImage: ~''; 
+@SiteBackgroundRepeat: repeat-x;
+@SiteBackgroundPosition: 0 0px;
+@SiteBackgroundSize: auto;
+@SiteLogoImage: ~''; 
+@SiteLogoHeight: ~'';
+@SiteLogoWidth: ~'';
+@SiteLogoPaddingRight: ~'';
+@SiteLogoPaddingLeft: ~'';
+@SiteHeaderBorderTopColor: #F0AB00;
+@SiteHeaderBorderTopStyle: solid;
+@SiteHeaderBorderTopWidth: 4px;
+@SiteHeaderBorderShadow: 0px 5px 5px rgba(50, 50, 50, 0.75) inset;
+@SiteHeaderTitleFontColor: #FFFFFF;
+@SiteHeaderBackgroundImage: ~'';
+@SiteHeaderBackgroundColor: ~'';
+@SiteHeaderBackgroundColorStartGradient: #5a5d60; 
+@SiteHeaderBackgroundColorEndGradient: #3a3a3a;
+@PageNavigationBarBackgroundColor: #2D2D2D;
+@PageNavigationBarFontColor: #fff;
+@SelectedPageTextColor: #F0AB00;
+@SelectedPageTextBackgroundColor: #151515;
+
+/* Color range of fade area in widget header */
+.widget-header-fading-area {
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 38%, rgba(255, 255, 255, 1) 62%) !important; /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(38%, rgba(255, 255, 255, 1)), color-stop(62%, rgba(255, 255, 255, 1))) !important; /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 38%, rgba(255, 255, 255, 1) 62%) !important; /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 38%, rgba(255, 255, 255, 1) 62%) !important; /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 38%, rgba(255, 255, 255, 1) 62%) !important; /* IE10+ */
+    background: linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 38%, rgba(255, 255, 255, 1) 62%) !important; /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#00ffffff', endColorstr = '#FFffffff', GradientType = 1) !important; /* IE6-9 */
+}
+
+@WidgetBackgroundColor: ~'';
+@WidgetBorderColor: ~'';
+
+
+/* START: Dialog Popup Window section */
+
+/* Properties of dialog popup windows */
+.pop-up-message {
+    background-color: #FFFFFF;
+    border: 6px solid #585859;
+}
+
+/* Font color in dialog popup windows messages */
+.pop-up-message-text {
+    color: #303030;
+}
+
+/* Font color in header of dialog popup windows */
+.pop-up-message-header {
+    color: #303030;
+}
+
+/* Properties of buttons in dialog popup windows */
+.pop-up-message-buttons {
+    cursor: pointer;
+    border: 1px solid #a6a7a9;
+    color: #303030;
+    background: #e4e4e4;
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmYTg0YyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZjdiMGQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+");
+    background: -moz-linear-gradient(top, #ffffff 0%, #e4e4e4 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #e4e4e4)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%, #e4e4e4 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%, #e4e4e4 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%, #e4e4e4 100%); /* IE10+ */
+    background: linear-gradient(top, #ffffff 0%, #e4e4e4 100%); /* W3C*/
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#e4e4e4', GradientType = 0); /* IE6-8 */
+}
+
+/* END: Dialog Popup Window section */
+
+@PageBackgroundColor: ~'';
+@SiteBackgroundColor: #000; 
+
+.site-header-title,
+.site-header-background,
+.site-header-border,
+.site-logo {
+display:none;
+}
+
+element.style {
+height: 1022px;
+}
+
+.wrapper {
+margin-top: -4px;
+left: -4px;
+right: 15px;
+position: absolute;
+width: auto;
+}

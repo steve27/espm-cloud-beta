@@ -1,0 +1,25 @@
+/* to add margin between product name and product description in sales order detail */
+.salesOrderItemDetailName{
+	margin-bottom: 5px;
+	font-size: 14px;
+}
+/* to add margin between product description and quantity in sales order detail */
+.salesOrderItemDetailQuantity{
+	margin-top: 10px;
+}
+/* to set the vertical alignment and margin for price in sales order detail */
+.salesOrderItemPrice{
+	vertical-align: top;
+	margin-top: 5px;
+	font-size: 14px !important;
+}
+/* to add margin between set minimum text and the minimum stock level,Order Items and Items in stock in stock detail */
+.stockdetailsMargin{
+	margin-bottom: 12px;
+}
+/* to add background image to sales order item */
+.salesOrderItemBackground{
+	padding: 2px;
+	border-color: #CCCCCC;
+	border-width: 1px;
+}

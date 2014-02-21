@@ -1,0 +1,6 @@
+Name=cloudbackendimages
+URL=https://cloudmodelespmhana.hana.ondemand.com
+Type=HTTP
+Authentication=NoAuthentication
+TrustAll=true
+ProxyType=Internet

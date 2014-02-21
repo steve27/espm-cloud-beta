@@ -1,0 +1,5 @@
+URL=https://smpmaas-espmhana.hana.ondemand.com/public/espm_shopping_abap
+Name=abapmobilebackend
+TrustAll=true
+Type=HTTP
+Authentication=NoAuthentication
